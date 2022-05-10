@@ -4,6 +4,7 @@ import matplotlib as plt
 import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
+from sklearn.manifold import TSNE
 
 #print the entire data from the HAPT Dataset
 print("Loading data from the HAPT dataset") 
@@ -252,7 +253,6 @@ plt.xticks(rotation=90)
 plt.show()
 
 #Implementing T-SNE on the data
-from sklearn.manifold import TSNE
 def TSNEVisualization(Xinfo, yinfo, perplexities, n_iter=1000, img_name_prefix='T-SNE'):
         
     for idx,perplex in enumerate(perplexities):
